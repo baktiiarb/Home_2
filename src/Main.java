@@ -2,12 +2,11 @@ import java.util.Random;
 
 public class Main {
     public static void main(String[] args) {
-        work(23,12);
-        work(5,8);
-        work(17,14);
-        work(14,-7);
-        work(11,5);
-        generateRandomAge();
+        System.out.println(work(21,-7));
+        System.out.println(work(12,2));
+        System.out.println(work(6,16));
+        System.out.println(work(11,21));
+        System.out.println(work(8,14));
 
 
     }
@@ -21,18 +20,17 @@ public class Main {
 
 
     public static String work(int age, int temp) {
-        System.out.println(" age = " + generateRandomAge() + " temp + " + temp);
+        String walk = "Можно идти гулять";
+        String hom = "оставайтесь дома";
 
         if (age > 20 && age < 45 && temp > -20 && temp < 30) {
-            System.out.println(" можно идти гулять ");
+            return walk;
         } else if (age < 20 && temp >= 0 && temp < 28) {
-            System.out.println("можно идти гулть");
+            return walk;
         } else if (age > 45 && temp > -10 && temp < 25) {
-            System.out.println("можно идти гулять");
-        } else {
-            System.out.println("оставайтесть дома");
-        }
-        return " age = " + age + " temp = " + temp;
+            return walk;
+        } else return hom;
+
     }
 
 }
